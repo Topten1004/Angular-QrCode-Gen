@@ -1,0 +1,80 @@
+<div class="body">
+  <div class="contenido_body">
+    <div class="contenedor">
+      <section class="contenido">
+        <!-- CREDITOS -->
+        <header>
+          <div class="credits">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/andre-ponce-242498181/"></a>
+            <i class="ti ti-brand-linkedin" style="color: var(--blue)"></i>
+            Linkedin
+          </div>
+          <div class="credits">
+            <a target="_blank" href="https://wa.me/50488011529"></a>
+            <i class="ti ti-brand-whatsapp" style="color: var(--green)"></i>
+            Whatsapp
+          </div>
+          <div class="credits">
+            <a target="_blank" href="mailto: andreponce417@gmail.com"></a>
+            <i class="ti ti-mailbox" style="color: var(--red)"></i>
+            Email
+          </div>
+          <div class="credits">
+            <a target="_blank" href="https://github.com/andreponce3322"></a>
+            <i class="ti ti-brand-github-filled"></i>
+            Github
+          </div>
+        </header>
+
+        <!-- INPUT E INFORMACION -->
+        <section class="information">
+          <div class="contenido">
+            <span
+              style="
+                padding-top: 35px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                margin: 0px;
+              "
+              >Enter a text, web page or numbers</span
+            >
+
+            <textarea
+              class="form-control"
+              placeholder="Here you can put a text, automatically the text gonna convert to a QRCODE"
+              [(ngModel)]="value"
+              (keyup)="generarCodigo()"></textarea>
+
+            <div class="title">
+              <section>
+                <span class="material-symbols-outlined"> qr_code_scanner </span>
+                QRCODE ANGULAR
+                <span style="color: #576cbc">GENERATOR</span>
+              </section>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section2">
+        <div class="music" (click)="Aleatorio()" [ngClass]="{ rotate: rotate }">
+          <p>
+            ¡Hi!, ¿dont know what to write? Just touch me
+            <i class="ti ti-dice-5"></i>.
+          </p>
+        </div>
+
+        <div class="result">
+          <img
+            [src]="QRCodeImgResult ? QRCodeImgResult : imagenDefault"
+            width="200px" />
+          <button class="btn" (click)="DownloadAndShare()">
+            Download and share <i class="ti ti-share-3"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

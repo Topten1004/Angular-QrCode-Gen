@@ -1,0 +1,28 @@
+<div class="contenedor">
+  <div class="bar_music">
+    <div class="progress-bar">
+      <div class="progress-bar-music">
+        <div class="progress-bar-value" #progress_bar_value></div>
+      </div>
+    </div>
+
+    <div class="bar_music_contenido">
+      <div class="icons-play-back-next">
+        <i class="ti ti-player-skip-back-filled small-icon"></i>
+        <i class="ti ti-player-play-filled" (click)="Play()" *ngIf="!play"></i>
+        <i class="ti ti-player-pause-filled" (click)="Pause()" *ngIf="play"></i>
+        <i class="ti ti-player-skip-forward-filled small-icon"></i>
+
+        <section style="color: gray; font-size: 13px; display: flex">
+          0:01/0:20
+        </section>
+      </div>
+      <div class="music-name flex"></div>
+      <div class="music-volumen flex">
+        <i class="ti ti-volume"></i>
+        <i class="ti ti-repeat"></i>
+        <i class="ti ti-share-2"></i>
+      </div>
+    </div>
+  </div>
+</div>
